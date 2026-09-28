@@ -41,6 +41,8 @@ class _RegisterPageState extends State<RegisterPage> {
         "password_confirmation":_passwordController.text,
         "name":_nameController.text.trim()
       });
+
+      if (!mounted) return; 
       Navigator.pushReplacement
         (context, MaterialPageRoute(
           builder: (context) => const LoginPage(),
